@@ -8,10 +8,9 @@ function ShameBtn() {
   return (
 <>
     <Wrapper>
-    
-      <StyledLink  to='/Likes'>Wall of shame</StyledLink>
+      <StyledLink  to='/Dislikes'>Wall of shame</StyledLink>
       <Amount shame>0</Amount>
-     </Wrapper>
+      </Wrapper>
     </>
     
   )
