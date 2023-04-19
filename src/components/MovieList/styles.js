@@ -18,7 +18,12 @@ font-weight: 600;
 color: ${props=>props.theme.linkColor};
 margin-right: 25px;
 `
-
+export const Wrapper=styled.div`
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 0px;
+`
 
 
 

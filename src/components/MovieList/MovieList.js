@@ -1,7 +1,7 @@
 import React from 'react'
 import useFetch from '../useFetch';
 import MovieCard from '../MovieCard/MovieCard';
-import {Title,Icons, MovieListContainer} from './styles'
+import {Title,Icons, MovieListContainer, Wrapper} from './styles'
 import {BsFilm} from 'react-icons/bs';
 
 function MovieList() {
@@ -19,10 +19,13 @@ function MovieList() {
     <MovieListContainer>
         <Title >
             <Icons><BsFilm /></Icons>
-        Movies</Title>
+        Movies
+        </Title>
+        <Wrapper>
        {movies && movies.map((item)=>{
         return <MovieCard key={item.id} item={item}/>
      })}
+     </Wrapper>
     </MovieListContainer>
   )
 }
