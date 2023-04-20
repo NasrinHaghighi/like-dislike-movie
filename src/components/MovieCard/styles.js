@@ -115,6 +115,9 @@ export const Like =styled.div`
 }
 `
 export const DisLike =styled.div`
+&.red{
+    color:red;
+}
 `
 
 

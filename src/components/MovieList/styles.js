@@ -6,14 +6,16 @@ padding:50px 0;
 
 `
 export const Title =styled.div`
-font-size: 22px;
+font-size: 30px;
 display: flex;
 margin-bottom: 50px;
+display: flex;
+justify-content: center;
 
 `
 
 export const Icons =styled.div`
-font-size: 22px;
+font-size: 30px;
 font-weight: 600;
 color: ${props=>props.theme.linkColor};
 margin-right: 25px;

@@ -14,7 +14,7 @@ function Favorite() {
 
   return (
     <MovieListContainer>
-        <Title >
+        <Title favorite>
             <Icons><BsFilm /></Icons>
         Favorite
         </Title>

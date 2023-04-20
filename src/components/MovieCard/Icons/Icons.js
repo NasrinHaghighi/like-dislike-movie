@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import {Like, DisLike} from '../styles'
 import { BiDislike, BiLike } from "react-icons/bi";
-import {addToLikeList} from '../../../featuers/likeSlice'
+import {addToLikeList, removeFromLikeList} from '../../../features/likeSlice'
+import { addToDisLikeList, removeFromDisLikeList } from '../../../features/dislikeSlice';
 import {  useDispatch ,useSelector} from 'react-redux'
 
 
@@ -9,25 +10,46 @@ function Icons({item}) {
  
     const dispatch=useDispatch()
     const likeList=useSelector((state)=>state.likeList.likeList)
-    const [liked ,setLiked] =useState(false)
+    const dislikeList=useSelector((state)=>state.dislikeList.dislikeList)
 
-let tempo=likeList.find((b)=>b.id === item.id)
+
+    const [liked ,setLiked] =useState(false)
+    const [disliked ,setdisliked] =useState(false)
+
+
+
+let tempoLike=likeList.find((b)=>b.id === item.id)
+let tempoDislike=dislikeList.find((b)=>b.id === item.id)
 useEffect(() => {
 
-if(tempo){
+if(tempoLike){
     setLiked(true)
 }
-}, [likeList])
+if(tempoDislike){
+    setdisliked(true)
+}
+
+}, [likeList,dislikeList])
 
 
 
     const addLikeHandel=(item)=>{
+        dispatch(removeFromDisLikeList(item))
+        setdisliked(false)
         dispatch(addToLikeList(item))
+    }
+    const addDislikeHandel=()=>{
+        dispatch(removeFromLikeList(item))
+        setLiked(false)
+        dispatch(addToDisLikeList(item))
     }
   return (
    <>
       <Like onClick={()=>addLikeHandel(item)} className={liked ? 'green' : null}><BiLike/></Like>
-      <DisLike><BiDislike/></DisLike>
+      <DisLike 
+      onClick={()=>addDislikeHandel(item)}
+      className={disliked ? 'red': ''}
+      ><BiDislike/></DisLike>
    
    </>
   )
