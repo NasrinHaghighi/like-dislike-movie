@@ -64,10 +64,12 @@ font-size: 14px;
 
 export const MovieTit =styled.h6`
 font-size: 20px;
-margin-bottom: 10px;
+
+margin: 20px 0 10px 0;
+
 `
 export const Summery =styled.p`
-font-size: 14px;
+font-size: ${props=>props.likePage ? '18px' : '14px'};
 padding: 0 10px;
 display: flex;
 flex-direction: column;
@@ -84,7 +86,7 @@ margin-bottom: 0;
 `
 
 export const LastDiv =styled.p`
-font-size: 14px;
+font-size: ${props=>props.likePage ? '18px' : '14px'};
 display: flex;
 justify-content: space-between;
 margin-bottom: 0;

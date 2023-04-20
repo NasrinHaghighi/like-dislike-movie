@@ -29,7 +29,7 @@ localStorage.setItem("likeList", JSON.stringify(state.likeList.map((item)=>item)
 
      removeFromLikeList:(state, action)=>{
 const newList =state.likeList.filter((item)=>{
-  return item.id === action.payload.id
+  return item.id != action.payload.id
 })
 state.likeList=newList
 localStorage.setItem("likeList", JSON.stringify(state.likeList.map((item)=>item)));
@@ -39,6 +39,6 @@ localStorage.setItem("likeList", JSON.stringify(state.likeList.map((item)=>item)
 })
 
 // Action creators are generated for each case reducer function
-export const { addToLikeList } = LikeSlice.actions
+export const { addToLikeList, removeFromLikeList } = LikeSlice.actions
 
 export default LikeSlice.reducer

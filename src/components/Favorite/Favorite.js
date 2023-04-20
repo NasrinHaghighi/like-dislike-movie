@@ -5,6 +5,7 @@ import {  useDispatch ,useSelector} from 'react-redux'
 
 import {Wrapper} from './style'
 import EmptyList from './EmptyList/EmptyList';
+import FavoriteItem from './FavoriteItem/FavoriteItem';
 
 function Favorite() {
     const dispatch=useDispatch()
@@ -19,7 +20,7 @@ function Favorite() {
         </Title>
 <Wrapper>
    {likeList.length>0 ? likeList.map((item) =>{
-    return <p>{item.title}</p>
+    return <FavoriteItem item={item}/>
    }) : <EmptyList />}
 </Wrapper>
         </MovieListContainer>
