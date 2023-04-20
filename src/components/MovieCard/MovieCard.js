@@ -1,6 +1,6 @@
 import React from 'react'
-import { BiDislike, BiLike } from "react-icons/bi";
-import {MovieItem,Top, Bottom,ImageContainer, TextWrapper, MovieTit,Summery, BottomTit, SummeryTit, Year,Vote,LastDiv, Icons, Like, DisLike} from './styles'
+import Icons from './Icons/Icons'
+import {MovieItem,Top, Bottom,ImageContainer, TextWrapper, MovieTit,Summery, BottomTit, SummeryTit, Year,Vote,LastDiv, IconsDiv} from './styles'
 
 
 
@@ -10,7 +10,7 @@ const size = "w300"
 
 
 function MovieCard({item}) {
-   console.log(item)
+   
     const {poster_path:path, title,overview, release_date:date, vote_average:vote} = item
     
   return (
@@ -34,10 +34,12 @@ function MovieCard({item}) {
            <Year>Year:{date.split('-')[0]}</Year>
            <Vote>Average vote :{vote}</Vote>
            </LastDiv>
-           <Icons>
-            <Like><BiLike/></Like>
-            <DisLike><BiDislike/></DisLike>
-           </Icons>
+           <IconsDiv>
+
+            <Icons item={item}/>
+            {/* <Like ><BiLike/></Like>
+            <DisLike><BiDislike/></DisLike> */}
+           </IconsDiv>
           
            
         </Bottom>

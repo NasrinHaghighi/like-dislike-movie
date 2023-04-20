@@ -1,8 +1,8 @@
 import React from 'react'
-
+import {FooterContainer} from './styles'
 function Footer() {
   return (
-    <div>Footer</div>
+    <FooterContainer>Footer</FooterContainer>
   )
 }
 

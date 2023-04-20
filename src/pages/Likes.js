@@ -1,8 +1,9 @@
 import React from 'react'
+import Favorite from '../components/Favorite/Favorite'
 
 function Likes() {
   return (
-    <div>Likes page</div>
+    <Favorite />
   )
 }
 

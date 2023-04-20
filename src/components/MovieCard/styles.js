@@ -99,7 +99,7 @@ export const Vote =styled.p`
 
 
 
-export const Icons =styled.div`
+export const IconsDiv =styled.div`
 font-size: 24px;
 display: flex;
 justify-content: space-between;
@@ -107,6 +107,10 @@ padding:0 30px;
 margin-bottom: 10px;
 `
 export const Like =styled.div`
+
+&.green{
+    color:green;
+}
 `
 export const DisLike =styled.div`
 `
