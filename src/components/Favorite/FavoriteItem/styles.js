@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FavoriteItemContainer =styled.div`
-border: 4px solid green;
+
 margin: 30px 0;
 padding: 10px;
 border-radius: 30px;
@@ -11,7 +11,13 @@ grid-template-columns: 0.5fr 3fr .5fr;
 grid-column-gap: 20px;
 grid-row-gap: 0px;
 height: auto;
-background-color: ${props=>props.theme.hoverBG}
+background-color: ${props=>props.theme.hoverBG};
+&.green{
+border:4px solid green;
+}
+&.red{
+    border:4px solid red; 
+}
 
 `
 

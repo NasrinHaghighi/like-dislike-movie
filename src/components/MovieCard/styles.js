@@ -17,6 +17,7 @@ export const TextWrapper =styled.div`
     transition: all ease 0.3s;
     opacity:0;
     text-align: center;
+    
 
 `
 

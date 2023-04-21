@@ -16,7 +16,7 @@ min-height: 100vh;
 
 `
 export const Main =styled.div`
- 
+ margin-top: 100px;
 
 
 `

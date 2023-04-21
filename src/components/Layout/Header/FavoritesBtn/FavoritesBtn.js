@@ -7,7 +7,7 @@ function FavoritesBtn() {
     <>
     <Wrapper>
     <Amount>0</Amount>
-      <StyledLink  to='/Likes'>Favorite List</StyledLink>
+      {/* <StyledLink  to='/Likes'>Favorite List</StyledLink> */}
       
      </Wrapper>
     </>

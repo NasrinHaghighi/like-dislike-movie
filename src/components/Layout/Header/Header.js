@@ -1,19 +1,32 @@
 import React from 'react'
-import {Container,Logo, List} from './styles'
+import {Container,Logo, List, StyledLink, Amount} from './styles'
 import { BiCameraMovie } from 'react-icons/bi';
 import FavoritesBtn from './FavoritesBtn/FavoritesBtn';
 import ShameBtn from './ShameBtn/ShameBtn';
-
-
+import {useLocation} from 'react-router-dom';
+import {  useSelector} from 'react-redux'
 
 function Header() {
+  const location = useLocation();
+  const pathname=location.pathname
+  
+  const likeList=useSelector((state)=>state.likeList.likeList)
+  const dislikeList=useSelector((state)=>state.dislikeList.dislikeList)
+  const amountLikeList=likeList.length
+ const amountDislikeList=dislikeList.length
   return (
    <Container>
     <Logo><BiCameraMovie /></Logo>
 
     <List>
-       <FavoritesBtn />
-       <ShameBtn /> 
+      
+    <StyledLink  to='/' className={pathname === '/' ? 'active' : ''}>  Home</StyledLink>
+    <StyledLink  to='/likes' className={pathname === '/likes' ? 'active' : ''}><Amount>{amountLikeList}</Amount>Favorite List</StyledLink>
+    <StyledLink  to='/dislikes' className={pathname === '/dislikes' ? 'active' : ''}><Amount shame>{amountDislikeList}</Amount>Wall of shame</StyledLink>
+   
+ 
+       {/* <FavoritesBtn />
+       <ShameBtn />  */}
        
     </List> 
 

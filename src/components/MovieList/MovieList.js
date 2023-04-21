@@ -4,13 +4,29 @@ import MovieCard from '../MovieCard/MovieCard';
 import {Title,Icons, MovieListContainer, Wrapper} from './styles'
 import {BsFilm} from 'react-icons/bs';
 
+import ClipLoader from "react-spinners/ClipLoader";
+
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "#fff",
+};
+
 function MovieList() {
 
     const {data:movies , loading, error}= useFetch('https://api.themoviedb.org/3/discover/movie?api_key=8454841ff275e66490314f04e5aaf36f')
 
 
     if (loading){
-        return <p>loading....</p>
+        return   <ClipLoader
+        color='#fff'
+        loading={loading}
+        cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
       }
 
 

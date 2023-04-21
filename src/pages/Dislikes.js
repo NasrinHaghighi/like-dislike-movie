@@ -1,8 +1,9 @@
 import React from 'react'
+import Shame from '../components/Shame/Shame'
 
 function Dislikes() {
   return (
-    <div>Dislikes page</div>
+    <Shame />
   )
 }
 
