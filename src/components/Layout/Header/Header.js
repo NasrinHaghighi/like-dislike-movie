@@ -1,10 +1,10 @@
 import React from 'react'
-import {Container,Logo, List, StyledLink, Amount} from './styles'
+import {Container,Logo, Left,List, StyledLink, Amount, SearchDiv} from './styles'
 import { BiCameraMovie } from 'react-icons/bi';
-import FavoritesBtn from './FavoritesBtn/FavoritesBtn';
-import ShameBtn from './ShameBtn/ShameBtn';
+
 import {useLocation} from 'react-router-dom';
 import {  useSelector} from 'react-redux'
+import Search from './Search/Search';
 
 function Header() {
   const location = useLocation();
@@ -16,6 +16,7 @@ function Header() {
  const amountDislikeList=dislikeList.length
   return (
    <Container>
+      <Left>
     <Logo><BiCameraMovie /></Logo>
 
     <List>
@@ -29,10 +30,10 @@ function Header() {
        <ShameBtn />  */}
        
     </List> 
-
-
-<div>search</div>
-
+    </Left>
+<SearchDiv>
+<Search />
+</SearchDiv>
 
    </Container>
   )

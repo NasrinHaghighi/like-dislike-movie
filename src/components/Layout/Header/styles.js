@@ -8,7 +8,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 /* box-shadow: 0 0 10px rgba(219, 241, 241, 0.4); */
-padding: 20px 200px;
+padding: 20px 0;
 
 top :0 ;
 left: 0;
@@ -20,16 +20,27 @@ export const Logo =styled.div`
 font-size: 45px;
 color:${props=>props.theme.linkColor};
 `
-
+export const Left =styled.div`
+display: flex;
+justify-content: space-between;
+width: 50%;
+font-weight: 700;
+font-size:20px;
+@media (max-width: 1400px) {
+  font-size:18px;
+  width:100%;
+  }
+`
 export const List =styled.div`
 display: flex;
+
+
 `
 
 export const StyledLink = styled(Link)`
 color:#fff;
 text-decoration: none;
-font-weight: 700;
-font-size:25px;
+
 margin-right: 70px;
 position: relative;
 &:after {
@@ -64,5 +75,12 @@ background-color: ${props=>props.shame ? 'red' : 'green'};
 text-align: center;
 border-radius: 50%;
 color: #ffff;
+`
+
+export const SearchDiv=styled.div`
+display: block;
+  @media (max-width: 1400px) {
+    display: none;
+  }
 `
 

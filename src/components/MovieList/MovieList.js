@@ -1,35 +1,27 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import useFetch from '../useFetch';
 import MovieCard from '../MovieCard/MovieCard';
 import {Title,Icons, MovieListContainer, Wrapper} from './styles'
 import {BsFilm} from 'react-icons/bs';
+import { useSelector } from 'react-redux';
+import Loader from '../Loader/Loader';
 
-import ClipLoader from "react-spinners/ClipLoader";
 
-
-const override = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "#fff",
-};
 
 function MovieList() {
+  const userTopic=useSelector((state=>state.userTopic.userSearchTopic))
 
-    const {data:movies , loading, error}= useFetch('https://api.themoviedb.org/3/discover/movie?api_key=8454841ff275e66490314f04e5aaf36f')
+let url='https://api.themoviedb.org/3/discover/movie?api_key=8454841ff275e66490314f04e5aaf36f'
 
+if(userTopic){
+   url=`https://api.themoviedb.org/3/search/movie?api_key=8454841ff275e66490314f04e5aaf36f&query=${userTopic}`
+}
+  
+    const {data:movies , loading}= useFetch(url)
 
     if (loading){
-        return   <ClipLoader
-        color='#fff'
-        loading={loading}
-        cssOverride={override}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
+        return  <Loader loading={loading}/>
       }
-
-
 
   return (
     <MovieListContainer>
@@ -38,7 +30,7 @@ function MovieList() {
         Movies
         </Title>
         <Wrapper>
-       {movies && movies.map((item)=>{
+       { movies?.map((item)=>{
         return <MovieCard key={item.id} item={item}/>
      })}
      </Wrapper>
