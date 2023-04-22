@@ -3,7 +3,7 @@
 
 
 export const generateRandomNum = () =>{
-    let x = Math.floor(Math.random() * 10)+1;
+    let x = Math.floor(Math.random() * 9)+1;
     return x
 
 }

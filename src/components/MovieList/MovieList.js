@@ -26,9 +26,12 @@ if(userTopic){
    url=`https://api.themoviedb.org/3/search/movie?api_key=8454841ff275e66490314f04e5aaf36f&query=${userTopic}`
 }
   
-    const {data:movies , loading}= useFetch(url)
+    const {data:movies , loading, error}= useFetch(url)
 
     if (loading){
+        return  <Loader loading={loading}/>
+      }
+      if (error){
         return  <Loader loading={loading}/>
       }
 

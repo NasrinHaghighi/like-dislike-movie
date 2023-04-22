@@ -32,14 +32,11 @@ function MovieCard({item}) {
            <BottomTit>{title}</BottomTit>
            
            <LastDiv>
-           <Year>Year:{date.split('-')[0]}</Year>
+           <Year>Year:{date?.split('-')[0]}</Year>
            <Vote>Average vote :{vote}</Vote>
            </LastDiv>
            <IconsDiv>
-
-            <Icons item={item}/>
-            {/* <Like ><BiLike/></Like>
-            <DisLike><BiDislike/></DisLike> */}
+           <Icons item={item}/>
            </IconsDiv>
           
            
