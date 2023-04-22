@@ -3,7 +3,11 @@ import {BsSearch} from 'react-icons/bs'
 import {Wrapper,IconDiv, Input , FlyingText, SearchTitle, Xdiv, LensDiv} from './styles'
 import {  useDispatch } from 'react-redux'
 import {UserTopic} from '../../../../features/userSearchTopic'
+import { useNavigate } from "react-router-dom";
+
+
 function Search() {
+  const navigate = useNavigate();
     const dispatch=useDispatch()
     const [iconClicked, setIconClicked]=useState(false)
     const [searchTopic, setSearchTopic] =useState('')
@@ -38,10 +42,12 @@ useEffect(()=>{
 
     /**************** */
      const onchangeInput=(e)=>{
+      navigate("/");
         setSearchTopic(e.target.value)
         const val=e.target.value
         /*save in redux*/
         dispatch(UserTopic(val))
+        
         clearTimeout(typingTimer);
         typingTimer = setTimeout(() => {
             if (val) {
