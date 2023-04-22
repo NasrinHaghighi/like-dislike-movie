@@ -25,7 +25,7 @@ display: grid;
 grid-template-columns: repeat(6, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 40px;
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
     grid-template-columns: repeat(4, 1fr);
   }
   @media (max-width: 1300px) {

@@ -1,8 +1,14 @@
 import React from 'react'
-import {FooterContainer} from './styles'
+import {FooterContainer,Box} from './styles'
 function Footer() {
   return (
-    <FooterContainer>Footer</FooterContainer>
+    <FooterContainer>
+      <Box>
+        <h4> All the right reserved by TMDB</h4>
+      
+      </Box>
+      
+    </FooterContainer>
   )
 }
 

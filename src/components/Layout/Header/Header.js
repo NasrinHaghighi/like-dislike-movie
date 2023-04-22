@@ -25,10 +25,7 @@ function Header() {
     <StyledLink  to='/likes' className={pathname === '/likes' ? 'active' : ''}><Amount>{amountLikeList}</Amount>Favorite List</StyledLink>
     <StyledLink  to='/dislikes' className={pathname === '/dislikes' ? 'active' : ''}><Amount shame>{amountDislikeList}</Amount>Wall of shame</StyledLink>
    
- 
-       {/* <FavoritesBtn />
-       <ShameBtn />  */}
-       
+  
     </List> 
     </Left>
 <SearchDiv>

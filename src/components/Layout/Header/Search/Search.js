@@ -36,12 +36,12 @@ useEffect(()=>{
     }
     },[iconClicked])
 
-    const onchangeInput=(e)=>{
+    /**************** */
+     const onchangeInput=(e)=>{
         setSearchTopic(e.target.value)
         const val=e.target.value
-        /*save value in redux*/
+        /*save in redux*/
         dispatch(UserTopic(val))
-
         clearTimeout(typingTimer);
         typingTimer = setTimeout(() => {
             if (val) {

@@ -9,10 +9,8 @@ align-items: center;
 justify-content: space-between;
 /* box-shadow: 0 0 10px rgba(219, 241, 241, 0.4); */
 padding: 20px 0;
-
 top :0 ;
 left: 0;
-
 z-index: 999px;
 background-color: ${props=>props.theme.mainBG}; 
 `
@@ -33,14 +31,14 @@ font-size:20px;
 `
 export const List =styled.div`
 display: flex;
-
-
+@media (max-width: 1400px) {
+ display: none;
+  }
 `
 
 export const StyledLink = styled(Link)`
 color:#fff;
 text-decoration: none;
-
 margin-right: 70px;
 position: relative;
 &:after {
@@ -53,8 +51,6 @@ position: relative;
     content: "";
     opacity: 0;
     transition: all ease 0.3s;
-
-
   }
 &.active{
     color: ${props=>props.theme.linkColor};
@@ -62,7 +58,6 @@ position: relative;
     opacity: 1;
   }
 }
-
 `;
 export const Amount =styled.span`
 position: absolute;
@@ -79,8 +74,5 @@ color: #ffff;
 
 export const SearchDiv=styled.div`
 display: block;
-  @media (max-width: 1400px) {
-    display: none;
-  }
+  
 `
-

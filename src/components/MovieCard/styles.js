@@ -24,7 +24,7 @@ export const TextWrapper =styled.div`
 
 export const MovieItem =styled.div`
 max-width: 250px;
-height: 420px;
+height: auto;
 border-radius: 30px;
 padding: 10px;
 background-color: transparent;

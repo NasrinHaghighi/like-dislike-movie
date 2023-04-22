@@ -10,5 +10,6 @@ export const themes = {
     red:'##FF2E2E',
     green:"#008000",
     lightPurple:"#27095f80",
-    textPurple:'#A39FB4'
+    textPurple:'#A39FB4',
+    footerColor:'#21205F'
     };

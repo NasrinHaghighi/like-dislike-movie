@@ -18,7 +18,7 @@ function MovieCard({item}) {
         <Top>
             <ImageContainer bg={`${baseImgUrl}/${size}${path}`}>
             <TextWrapper>
-                <MovieTit>{title}</MovieTit>
+                <MovieTit>{title.length<15 ? title : title.substring(0,15)}</MovieTit>
                 <Summery>
                 <SummeryTit>Summery :</SummeryTit>
                   <span>{overview.length<150 ? overview : overview.substring(0,150)}</span>
@@ -30,6 +30,7 @@ function MovieCard({item}) {
         </Top>
         <Bottom>
            <BottomTit>{title}</BottomTit>
+           
            <LastDiv>
            <Year>Year:{date.split('-')[0]}</Year>
            <Vote>Average vote :{vote}</Vote>

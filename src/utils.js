@@ -1,3 +1,15 @@
+
+
+
+
+export const generateRandomNum = () =>{
+    let x = Math.floor(Math.random() * 10)+1;
+    return x
+
+}
+
+
+
 // const [offset, setOffset] = useState(0);
 // const [isUpper, setIsUpper] = useState(false);
 
