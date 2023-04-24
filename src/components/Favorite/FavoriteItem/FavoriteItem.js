@@ -1,6 +1,6 @@
 import React from 'react'
-import {FavoriteItemContainer, Right, Middle, Left} from './styles'
-import {MovieTit,Summery,LastDiv,Year,Vote} from  '../../MovieCard/styles'
+import {FavoriteItemContainer, Right, Middle, Left, Summery} from './styles'
+import {MovieTit,LastDiv,Year,Vote} from  '../../MovieCard/styles'
 import {BsTrash3Fill} from 'react-icons/bs'
 import {  useDispatch } from 'react-redux'
 import {removeFromDisLikeList} from '../../../features/dislikeSlice'
@@ -29,9 +29,8 @@ function FavoriteItem({item,shameItem}) {
       <Left bg={`${baseImgUrl}/${size}${path}`}></Left>
       <Middle>
       <MovieTit>{title}</MovieTit>
-      <Summery likePage>
-               
-                  <span>{overview.length<300 ? overview : overview.substring(0,300)}</span>
+      <Summery >
+            <span>{overview.length<300 ? overview : overview.substring(0,300)}</span>
       </Summery>
       <LastDiv likePage>
            <Year >Year:{date.split('-')[0]}</Year>

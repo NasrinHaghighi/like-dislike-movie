@@ -70,10 +70,11 @@ margin: 20px 0 10px 0;
 
 `
 export const Summery =styled.p`
-font-size: ${props=>props.likePage ? '18px' : '14px'};
+font-size:14px;
 padding: 0 10px;
 display: flex;
 flex-direction: column;
+
 
 `
 export const SummeryTit=styled.span`
@@ -91,6 +92,9 @@ font-size: ${props=>props.likePage ? '18px' : '14px'};
 display: flex;
 justify-content: space-between;
 margin-bottom: 0;
+@media (max-width:600px) {
+    flex-direction: column;
+  }
 
 
 `

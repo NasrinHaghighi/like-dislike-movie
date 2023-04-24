@@ -18,6 +18,10 @@ border:4px solid green;
 &.red{
     border:4px solid red; 
 }
+@media (max-width: 600px) {
+    grid-template-columns:1fr 2fr 1fr;
+    grid-column-gap: 5px;
+  }
 
 `
 
@@ -39,4 +43,13 @@ display: flex;
 justify-content: left;
 align-items: center;
 margin-top: 2 0px;
+`
+export const Summery=styled.div`
+font-size: 18px;
+padding: 0 10px;
+display: flex;
+flex-direction: column;
+@media (max-width: 900px) {
+    display: none;
+  }
 `

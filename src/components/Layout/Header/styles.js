@@ -13,10 +13,18 @@ top :0 ;
 left: 0;
 z-index: 999px;
 background-color: ${props=>props.theme.mainBG}; 
+@media (max-width: 600px) {
+
+
+  }
 `
 export const Logo =styled.div`
 font-size: 45px;
 color:${props=>props.theme.linkColor};
+@media (max-width: 600px) {
+
+display:none;
+  }
 `
 export const Left =styled.div`
 display: flex;
