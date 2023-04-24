@@ -7,11 +7,12 @@ import {  useSelector} from 'react-redux'
 import Search from './Search/Search';
 
 function Header() {
+  /*use location to change style by page*/
   const location = useLocation();
   const pathname=location.pathname
   
-  const likeList=useSelector((state)=>state.likeList.likeList)
-  const dislikeList=useSelector((state)=>state.dislikeList.dislikeList)
+  const likeList =useSelector((state)=>state.likeList.likeList)
+  const dislikeList =useSelector((state)=>state.dislikeList.dislikeList)
   const amountLikeList=likeList.length
  const amountDislikeList=dislikeList.length
   return (

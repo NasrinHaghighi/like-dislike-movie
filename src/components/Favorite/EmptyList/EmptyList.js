@@ -8,7 +8,7 @@ function EmptyList() {
   return (
    
     <Wrapper>
-    <Message>Your Favorite list is Empty</Message>
+    <Message>Your list is Empty</Message>
     </Wrapper>
   
   )

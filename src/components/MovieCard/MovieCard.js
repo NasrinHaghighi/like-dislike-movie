@@ -10,12 +10,13 @@ const size = "w300"
 
 
 function MovieCard({item}) {
-   
+   /*destracture data from item */
     const {poster_path:path, title,overview, release_date:date, vote_average:vote} = item
     
   return (
     <MovieItem>
         <Top>
+          {/* send image as props to use as backgroubd image */}
             <ImageContainer bg={`${baseImgUrl}/${size}${path}`}>
             <TextWrapper>
                 <MovieTit>{title.length<15 ? title : title.substring(0,15)}</MovieTit>

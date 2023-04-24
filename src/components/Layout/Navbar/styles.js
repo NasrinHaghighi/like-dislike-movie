@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 export const NavbarBox =styled.div`
 display: none;
 position: fixed;
-right: 2%;
+right: 2% !important;
 top: 30%;
-
 @media (max-width: 1400px) {
 display: block;
 } 

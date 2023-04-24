@@ -10,6 +10,7 @@ function Shame() {
     const dislikeList=useSelector((state)=>state.dislikeList.dislikeList)
   return (
     <MovieListContainer>
+      {/* change styles by props */}
         <Title favorite>
             <Icons><BsFilm /></Icons>
         Wall of shame

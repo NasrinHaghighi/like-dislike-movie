@@ -7,8 +7,11 @@ import { useNavigate } from "react-router-dom";
 
 
 function Search() {
+  /*redirect to home page by onchange event in input*/
   const navigate = useNavigate();
     const dispatch=useDispatch()
+
+    /*state for animation*/
     const [iconClicked, setIconClicked]=useState(false)
     const [searchTopic, setSearchTopic] =useState('')
 
@@ -17,6 +20,8 @@ const [searchTopiclength, setSearchTopicLength] =useState(false)
 const [showCloseIcon, setShowCloseIcon] =useState(false)
 const [back, setBack] =useState(false)
 let typingTimer = null;
+
+
 
 useEffect(()=>{
 if (searchTopic?.length>0){

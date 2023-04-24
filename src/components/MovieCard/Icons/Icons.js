@@ -9,8 +9,8 @@ import {  useDispatch ,useSelector} from 'react-redux'
 function Icons({item}) {
  
     const dispatch=useDispatch()
-    const likeList=useSelector((state)=>state.likeList.likeList)
-    const dislikeList=useSelector((state)=>state.dislikeList.dislikeList)
+    const likeList = useSelector((state)=>state.likeList.likeList)
+    const dislikeList = useSelector((state)=>state.dislikeList.dislikeList)
 
 
     const [liked ,setLiked] =useState(false)
@@ -32,7 +32,7 @@ if(tempoDislike){
 }, [likeList,dislikeList])
 
 
-
+/*by click on each icon first remove from oposite list*/
     const addLikeHandel=(item)=>{
         dispatch(removeFromDisLikeList(item))
         setdisliked(false)

@@ -14,10 +14,14 @@ const Layout =({children}) =>{
         <>
         <MainContainer>
       <InnerContainer>
-     <Navbar />
+    
              <Header /> 
+
+             
         <Main>{children}</Main>
-      <Footer />  
+            <Navbar />
+      
+           <Footer />  
       </InnerContainer>
       </MainContainer>
         </>

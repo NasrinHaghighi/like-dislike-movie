@@ -81,6 +81,6 @@ color: #ffff;
 `
 
 export const SearchDiv=styled.div`
-display: block;
+
   
 `
