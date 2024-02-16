@@ -30,13 +30,11 @@ if(userTopic){
 }
   
     const {data:movies , loading, error}= useFetch(url)
-
+console.log(movies)
     if (loading){
-        return  <Loader loading={loading}/>
+        return  <p>lOADING...</p>
       }
-      if (error){
-        return  <Loader loading={loading}/>
-      }
+      
 
   return (
     <MovieListContainer>
@@ -47,7 +45,7 @@ if(userTopic){
         <Wrapper>
        { movies?.map((item)=>{
         return <MovieCard key={item.id} item={item}/>
-     })}
+     })} 
      </Wrapper>
      
     </MovieListContainer>
